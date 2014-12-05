@@ -42,10 +42,14 @@
 </head>
 <body>
 
-    <img src="/logo.jpg" alt="HKITE Logo" />
+    <!--<img src="/logo.jpg" alt="HKITE Logo" />-->
     <article>
         <h1>
             {{article_title}}
+            <br />
+            <small>
+                港飘IT圈LinkHub
+            </small>
         </h1>
 
         {% for link in links %}
@@ -54,6 +58,13 @@
         </h2>
         <p>{{link.link_description}}</p>
         {% endfor %}
+
+    <hr />
+
+    <img src="/qrcode.jpg" alt="HKITE QR Code" />
+    <p>港飘IT圈(hkitexpats): 为港飘带来高质量IT资讯</p>
+
+    </article>
 
     <script type="text/javascript">
     /**
