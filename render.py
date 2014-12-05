@@ -39,7 +39,10 @@ def main():
         a_fn = '%s/index.html' % a_dir
         if not os.path.exists(a_dir):
             os.mkdir(a_dir)
-        open(a_fn, 'w').write(template.render(links=links))
+        open(a_fn, 'w').write(template.render(
+            article_title=links[0]['article_title'],
+            links=links
+            ))
 
 if __name__ == '__main__':
     main()
