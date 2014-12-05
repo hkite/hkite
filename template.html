@@ -45,8 +45,10 @@
         </h1>
 
         {% for link in links %}
+        <h2>
         <a href="{{link.link}}">{{link.link_title}}</a>
-        <br />
+        </h2>
+        <p>{{link.link_description}}</p>
         {% endfor %}
 
     <script type="text/javascript">
