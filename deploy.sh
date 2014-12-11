@@ -16,7 +16,7 @@ cd -
 
 # Update to our local files
 rm -rf _build/*
-cp -r qrcode.jpg logo.jpg l/ _build/
+cp -r index.html qrcode.jpg logo.jpg l/ _build/
 
 # Push to GitHub for hosting
 cd _build
