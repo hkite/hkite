@@ -21,7 +21,9 @@ cd -
 
 # Update to our local files
 rm -rf _build/*
-cp -r CNAME index.html qrcode.jpg logo.jpg l/ _build/
+# To cope with the MAC's cp command
+# If you do "l/", it means "l/*" on MAC..
+cp -r CNAME index.html qrcode.jpg logo.jpg l _build/
 
 # Push to GitHub for hosting
 cd _build
