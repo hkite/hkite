@@ -20,6 +20,8 @@ import requests
 from collections import defaultdict
 
 def main():
+    if not os.path.exists('l'):
+        os.mkdir('l')
     url = 'https://spreadsheets.google.com/feeds/list/1We6YTBTZUMwxqRqWkRJs_lzmrzWhq5V_t93q7jw_dLw/od6/public/values?alt=json'
     res = requests.get(url).json()
     articles = defaultdict(list)
