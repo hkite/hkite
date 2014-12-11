@@ -10,10 +10,10 @@
     <title>港漂IT圈LinkHub</title>
     <meta name="sharecontent" 
           data-msg-img="http://hkite.hupili.net/logo.jpg"
-          data-msg-title="初探开源工作坊"
+          data-msg-title="{{ article_title }}"
           data-line-img="http://hkite.hupili.net/logo.jpg"
-          data-line-title="初探开源工作坊"
-          data-msg-content="飘IT圈 LinkHub for article "
+          data-line-title="{{ article_title }}"
+          data-msg-content="飘IT圈 LinkHub for article {{article_id}}"
           />
 
     <style type="text/css" media="all">
@@ -45,34 +45,19 @@
     <!--<img src="/logo.jpg" alt="HKITE Logo" />-->
     <article>
         <h1>
-            初探开源工作坊
+            {{article_title}}
             <br />
             <small>
                 港漂IT圈LinkHub
             </small>
         </h1>
 
-        
+        {% for link in links %}
         <h2>
-        <a href="http://2015.opensource.hk/">2015 Open Source Conference HK 网站</a>
+        <a href="{{link.link}}">{{link.link_title}}</a>
         </h2>
-        <p>Open Source HK的主页</p>
-        
-        <h2>
-        <a href="https://www.facebook.com/events/740675442694088/">Raspberry Pi Hackfest</a>
-        </h2>
-        <p>Raspberry Pi Hackfest的Facebook主页</p>
-        
-        <h2>
-        <a href="http://zh.wikipedia.org/wiki/%E6%A0%91%E8%8E%93%E6%B4%BE">树莓派 -- 维基百科:</a>
-        </h2>
-        <p>树莓派 -- 维基百科</p>
-        
-        <h2>
-        <a href="https://github.com/">GitHub 网站</a>
-        </h2>
-        <p>作为开源代码库以及版本控制系统，Github已经成为了管理软件开发以及发现已有代码的首选方法。</p>
-        
+        <p>{{link.link_description}}</p>
+        {% endfor %}
 
     <hr />
 

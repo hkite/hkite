@@ -4,7 +4,12 @@
 # Clone the remote gh-pages into local _build folder.
 # If things went south, you can remove _build folder and start this script again.
 if [[ ! -e _build ]]; then
-    git clone git@github.com:hupili/hkite.git -b gh-pages _build
+    git clone -b gh-pages git@github.com:hupili/hkite.git _build
+fi
+
+if [[ ! -e _build ]]; then
+    echo "Error: no _build dir"
+    exit 255
 fi
 
 # Update to upstream
