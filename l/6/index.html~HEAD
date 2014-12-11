@@ -10,10 +10,10 @@
     <title>港漂IT圈LinkHub</title>
     <meta name="sharecontent" 
           data-msg-img="http://hkite.hupili.net/logo.jpg"
-          data-msg-title="{{ article_title }}"
+          data-msg-title="港飘IT圈活动精选【12.11】"
           data-line-img="http://hkite.hupili.net/logo.jpg"
-          data-line-title="{{ article_title }}"
-          data-msg-content="飘IT圈 LinkHub for article {{article_id}}"
+          data-line-title="港飘IT圈活动精选【12.11】"
+          data-msg-content="飘IT圈 LinkHub for article "
           />
 
     <style type="text/css" media="all">
@@ -45,19 +45,25 @@
     <!--<img src="/logo.jpg" alt="HKITE Logo" />-->
     <article>
         <h1>
-            {{article_title}}
+            港飘IT圈活动精选【12.11】
             <br />
             <small>
                 港漂IT圈LinkHub
             </small>
         </h1>
 
-        {% for link in links %}
+        
         <h2>
-        <a href="{{link.link}}">{{link.link_title}}</a>
+        <a href="https://www.facebook.com/events/987521254607625/">Sharing Hong Kong Hackathon</a>
         </h2>
-        <p>{{link.link_description}}</p>
-        {% endfor %}
+        <p>12月13、14全日黑客松，GoodLab, L1, The Sparkle, 500 Tung Chau Street, Kowloon, Hong Kong</p>
+        
+        <h2>
+        <a href="http://www.meetup.com/Codeaholics/events/218751388/">Codeaholics Hackathon - MYO
+</a>
+        </h2>
+        <p>12月12日晚 ~ 14日，黑客松，42 Labs, Flat C, 1/F, Go Up Commercial Building, 998 Canton Road, Mong Kok, Kowloon</p>
+        
 
     <hr />
 
