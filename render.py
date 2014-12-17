@@ -31,7 +31,7 @@ def main():
         articles[article_id].append({
             'article_id': e['gsx$articleid']['$t'],
             'article_title': e['gsx$articletitle']['$t'],
-            'link': e['gsx$link']['$t'],
+            'link': e.get('gsx$link', {}).get('$t', ''),
             'link_title': e['gsx$linktitle']['$t'],
             'link_description': e['gsx$linkdescription']['$t']
             })

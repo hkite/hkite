@@ -54,7 +54,11 @@
 
         {% for link in links %}
         <h2>
-        <a href="{{link.link}}">{{link.link_title}}</a>
+            {% if link.link %}
+            <a href="{{link.link}}">{{link.link_title}}</a>
+            {% else %}
+            <span>{{link.link_title}}</span>
+            {% endif %}
         </h2>
         <p>{{link.link_description}}</p>
         {% endfor %}
