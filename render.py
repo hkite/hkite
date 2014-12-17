@@ -35,6 +35,10 @@ def main():
             'link_title': e['gsx$linktitle']['$t'],
             'link_description': e['gsx$linkdescription']['$t']
             })
+
+    for article_id in articles:
+        articles[article_id] = list(enumerate(articles[article_id]))
+
     template = Template(open('template.html').read())
     for article_id, links in articles.iteritems():
         a_dir = 'l/%s' % article_id
@@ -42,7 +46,7 @@ def main():
         if not os.path.exists(a_dir):
             os.mkdir(a_dir)
         open(a_fn, 'w').write(template.render(
-            article_title=links[0]['article_title'],
+            article_title=links[0][1]['article_title'],
             links=links
             ))
 

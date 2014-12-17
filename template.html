@@ -38,6 +38,9 @@
             color: #555;
             line-height: 1.2em;
         }
+        .entry {
+            margin-bottom: 2.5em;
+        }
     </style>
 </head>
 <body>
@@ -52,21 +55,28 @@
             </small>
         </h1>
 
-        {% for link in links %}
-        <h2>
-            {% if link.link %}
-            <a href="{{link.link}}">{{link.link_title}}</a>
-            {% else %}
-            <span>{{link.link_title}}</span>
-            {% endif %}
-        </h2>
-        <p>{{link.link_description}}</p>
+        {% for (i, link) in links %}
+        <div class="entry">
+            <h2>
+                [{{i + 1}}]
+                {% if link.link %}
+                <a href="{{link.link}}">{{link.link_title}}</a>
+                {% else %}
+                <span>{{link.link_title}}</span>
+                {% endif %}
+            </h2>
+            <p>{{link.link_description}}</p>
+        </div>
         {% endfor %}
 
     <hr />
 
     <img src="/qrcode.jpg" alt="HKITE QR Code" />
     <p>港漂IT圈(hkitexpats): 为港漂带来高质量IT资讯</p>
+
+    <hr />
+
+    <p>港漂IT圈LinkHub: 延伸阅读、参考资料、脚注和评论</p>
 
     </article>
 
