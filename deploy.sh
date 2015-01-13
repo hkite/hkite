@@ -23,7 +23,7 @@ cd -
 rm -rf _build/*
 # To cope with the MAC's cp command
 # If you do "l/", it means "l/*" on MAC..
-cp -r CNAME index.html qrcode.jpg logo.jpg l _build/
+cp -r CNAME index.html qrcode1.jpg logo.jpg l _build/
 
 # Push to GitHub for hosting
 cd _build
